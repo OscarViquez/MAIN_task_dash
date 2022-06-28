@@ -13,21 +13,28 @@
 
     <!-- CSS FILES  -->
     <!-- ..................................................................... -->
-    <link rel="stylesheet" href="/view/styles/reset.css">
-    <link rel="stylesheet" href="/view/styles/style.css">
+    <link rel="stylesheet" href="/public/styles/reset.css">
+    <link rel="stylesheet" href="/public/styles/style.css">
 
     <!-- FONT AWESOME  -->
     <!-- ..................................................................... -->
     <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
+    <script defer src="/controller/tasksCards.js"></script>
 
 </head>
 
 <body>
+    <!-- BODY CONTAINER -->
+    <!-- ================================================================ -->
     <div class="dashboard">
+
+        <!-- SIDE MENU BAR -->
+        <!-- ================================================================ -->
         <aside class="sidebar">
             <div class="sidebar-image">
                 <a href="#">
-                    <img src="/assets/images/logo-2.png" alt="Dashboard Logo">
+                    <img src="/public/assets/images/logo-2.png" alt="Dashboard Logo" id="sidebar-image-logo">
+                    <img src="/public/assets/images/logo-icon.png" alt="Dashboard Logo" id="sidebar-image-icon">
                 </a>
             </div>
 
@@ -35,7 +42,7 @@
                 <ul class="sidebar-list">
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link sidebar-link--active">
-                            <i class="fa-solid fa-rectangle-list"></i> <span> Overview</span>
+                            <i class="fa-solid fa-compass"></i> <span> Overview</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -67,7 +74,12 @@
             </nav>
         </aside>
 
+        <!-- OVERVIEW -->
+        <!-- ================================================================ -->
         <main class="main-content">
+
+            <!-- OVERVIEW HEADER -->
+            <!-- ================================================================ -->
             <header class="overview-header">
                 <div class="overview-header-topbar">
 
@@ -86,11 +98,30 @@
                 </div>
             </header>
 
-            <article>
+            <!-- OVERVIEW TASKS MANAGEMENT -->
+            <!-- ================================================================ -->
+            <article class="overview-tasks tasks-section">
+                <h2 class="tasks__title">
+                    Task To Complete
+                </h2>
+
+                <!-- OVERVIEW TASKS INPUT FIELD -->
+                <!-- ================================================================ -->
+                <form class="tasks-input-section">
+                    <input type="text" name="create-task-input" id="create-task-input" placeholder="Type New Task Here">
+                    <input type="submit" id="create-task-submit" name="Add Task" value="Add Task">
+                </form>
+
+                <!-- OVERVIEW TASKS CARDS WRAPPER -->
+                <!-- ================================================================ -->
+                <div class="tasks-cards">
+
+                </div>
 
             </article>
         </main>
     </div>
+
 
 
 </body>
